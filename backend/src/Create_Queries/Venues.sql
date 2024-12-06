@@ -2,11 +2,11 @@ use [EventManagementSystem];
 
 
  CREATE TABLE Venues (
-   Venue_ID INT PRIMARY KEY,
+   Venue_ID INT PRIMARY KEY IDENTITY(1,1),
    Venue_Loc INT FOREIGN KEY REFERENCES Locations(location_ID),
    Venue_Name VARCHAR(100),
    Venue_Description VARCHAR(MAX),
-   Phone_Number INT UNIQUE,
+   Phone_Number VARCHAR(100) UNIQUE,
    Email VARCHAR(100) UNIQUE CHECK(Email LIKE '%_@_%._%'),
    Venue_Type VARCHAR(100) CHECK (Venue_Type IN ('Indoor', 'Outdoor', 'Virtual', 'Hybrid')),
    Capacity INT,

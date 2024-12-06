@@ -2,7 +2,7 @@ use [EventManagementSystem];
 
 
 CREATE TABLE Sponsors (
-   Sponsor_ID INT PRIMARY KEY,
+   Sponsor_ID INT PRIMARY KEY IDENTITY(1,1),
    Sponsor_Name VARCHAR(100) NOT NULL,
    Category VARCHAR(100) NOT NULL CHECK(Category IN ('Corporate', 'Government', 'Non-Profit', 'Educational', 'Other')),
    Email VARCHAR(100) UNIQUE CHECK(Email LIKE '%_@_%._%'),

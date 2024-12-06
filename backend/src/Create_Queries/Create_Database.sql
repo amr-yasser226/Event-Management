@@ -121,7 +121,7 @@ CREATE DATABASE EventManagementSystem;
 
 
 --  CREATE TABLE Tickets (
---    Ticket_ID INT PRIMARY KEY,
+--    Ticket_ID INT PRIMARY KEY IDENTITY(1,1),
 --    Event_ID INT FOREIGN KEY REFERENCES Events(Event_ID),
 --    User_ID INT FOREIGN KEY REFERENCES  Users(User_ID),
 --    Price DECIMAL (12,2),
@@ -142,7 +142,7 @@ CREATE DATABASE EventManagementSystem;
 
 
 --  CREATE TABLE Venues (
---    Venue_ID INT PRIMARY KEY,
+--    Venue_ID INT PRIMARY KEY IDENTITY(1,1),
 --    Venue_Loc INT FOREIGN KEY REFERENCES Locations(location_ID),
 --    Venue_Name VARCHAR(100),
 --    Venue_Description VARCHAR(MAX),
@@ -162,7 +162,7 @@ CREATE DATABASE EventManagementSystem;
 
 
 -- CREATE TABLE Sponsors (
---    Sponsor_ID INT PRIMARY KEY,
+--    Sponsor_ID INT PRIMARY KEY IDENTITY(1,1),
 --    Sponsor_Name VARCHAR(100) NOT NULL,
 --    Category VARCHAR(100) NOT NULL CHECK(Category IN ('Corporate', 'Government', 'Non-Profit', 'Educational', 'Other')),
 --    Email VARCHAR(100) UNIQUE CHECK(Email LIKE '%_@_%._%'),
@@ -176,7 +176,7 @@ CREATE DATABASE EventManagementSystem;
 
 
 -- CREATE TABLE Vendors (
---    Vendor_ID INT PRIMARY KEY ,
+--    Vendor_ID INT PRIMARY KEY IDENTITY(1,1),
 --    Vendor_Name varchar(100),
 --    Email VARCHAR(100) UNIQUE CHECK(Email LIKE '%_@_%._%'),
 --    Phone_Number INT UNIQUE,
