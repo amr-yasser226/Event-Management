@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Frontend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional Layout CSS -->
+    <link rel="stylesheet" href="~/Pages/Shared/_Layout.cshtml.css" />
+
+    @RenderSection("Styles", required: false)
+</head>
+
+<body>
+    <!-- Removed the header and navigation bar to eliminate duplication -->
+
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+
+    <footer class="footer bg-light py-3">
+        <div class="container">
+            <span class="text-muted">&copy; 2024 - Frontend</span>
+        </div>
+    </footer>
+
+    <!-- jQuery must be loaded before Bootstrap JS -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/js/script.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

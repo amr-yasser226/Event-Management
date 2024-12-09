@@ -1,0 +1,22 @@
+﻿/* _Layout.cshtml.css */
+
+body {
+  padding-top: 70px;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 10px;
+}

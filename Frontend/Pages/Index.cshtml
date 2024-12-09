@@ -1,0 +1,33 @@
+﻿@page
+@model Frontend.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Our Event</h1>
+    <p>Select an option below:</p>
+    <div class="row justify-content-center">
+        <!-- First Three Choices: Attend, Volunteer, Organize -->
+        <div class="col-md-2 mb-2">
+            <a class="btn btn-primary btn-block" href="/AuthChoice/AuthChoice?role=Attendee">Attend</a>
+        </div>
+        <div class="col-md-2 mb-2">
+            <a class="btn btn-secondary btn-block" href="/AuthChoice/AuthChoice?role=Volunteer">Volunteer</a>
+        </div>
+        <div class="col-md-2 mb-2">
+            <a class="btn btn-success btn-block" href="/AuthChoice/AuthChoice?role=Organizer">Organize</a>
+        </div>
+
+        <!-- Last Three Choices: Vendor, Sponsor, Donate -->
+        <div class="col-md-2 mb-2">
+            <a class="btn btn-info btn-block" href="/Vendor/Vendor">Vendor</a>
+        </div>
+        <div class="col-md-2 mb-2">
+            <a class="btn btn-warning btn-block" href="/Sponsor/Sponsor">Sponsor</a>
+        </div>
+        <div class="col-md-2 mb-2">
+            <a class="btn btn-danger btn-block" href="/Donation/Donation">Donate</a>
+        </div>
+    </div>
+</div>

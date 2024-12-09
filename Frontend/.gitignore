@@ -1,0 +1,31 @@
+# Build Folders
+/bin/
+/obj/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio cache
+.vs/
+.vscode/
+
+# Logs
+*.log
+
+# Others
+*.dbmdl
+*.bak
+*.backup
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml
+
+# Temporary Files
+*.tmp
+*.temp

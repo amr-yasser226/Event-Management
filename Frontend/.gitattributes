@@ -1,0 +1,31 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted to LF on checkout.
+*.cs text diff=csharp
+*.cshtml text
+*.html text
+*.css text
+*.js text
+*.json text
+*.xml text
+*.md text
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.dll binary
+*.exe binary
+*.pdf binary
+
+# Ensure specific scripts use LF line endings
+*.ps1 text eol=lf
+*.sh text eol=lf
+
+# Ensure that configuration files use LF
+*.gitignore text eol=lf
+*.gitattributes text eol=lf

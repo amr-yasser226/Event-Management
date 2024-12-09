@@ -1,0 +1,32 @@
+@page
+@model Frontend.Pages.Sponsor.SponsorModel
+@{
+    ViewData["Title"] = "Sponsor";
+}
+
+<h2>Sponsor</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Sponsor.CompanyName"></label>
+        <input asp-for="Sponsor.CompanyName" class="form-control" />
+        <span asp-validation-for="Sponsor.CompanyName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Sponsor.ContactPerson"></label>
+        <input asp-for="Sponsor.ContactPerson" class="form-control" />
+        <span asp-validation-for="Sponsor.ContactPerson" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Sponsor.Email"></label>
+        <input asp-for="Sponsor.Email" class="form-control" />
+        <span asp-validation-for="Sponsor.Email" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
