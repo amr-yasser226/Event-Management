@@ -29,3 +29,23 @@ StyleCopReport.xml
 # Temporary Files
 *.tmp
 *.temp
+
+# NuGet Packages
+*.nupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurepub
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Rider
+.idea/
+
+# Windows
+Thumbs.db

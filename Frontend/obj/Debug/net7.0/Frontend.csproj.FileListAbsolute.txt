@@ -1,8 +1,0 @@
-C:\Event-Management\Frontend\obj\Debug\net7.0\Frontend.GeneratedMSBuildEditorConfig.editorconfig
-C:\Event-Management\Frontend\obj\Debug\net7.0\Frontend.AssemblyInfoInputs.cache
-C:\Event-Management\Frontend\obj\Debug\net7.0\Frontend.AssemblyInfo.cs
-C:\Event-Management\Frontend\obj\Debug\net7.0\Frontend.csproj.CoreCompileInputs.cache
-C:\Event-Management\Frontend\obj\Debug\net7.0\Frontend.MvcApplicationPartsAssemblyInfo.cache
-C:\Event-Management\Frontend\obj\Debug\net7.0\Frontend.RazorAssemblyInfo.cache
-C:\Event-Management\Frontend\obj\Debug\net7.0\Frontend.RazorAssemblyInfo.cs
-C:\Event-Management\Frontend\obj\Debug\net7.0\Frontend.sourcelink.json

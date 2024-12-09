@@ -10,6 +10,8 @@
 *.json text
 *.xml text
 *.md text
+*.txt text
+*.config text
 
 # Denote all files that are truly binary and should not be modified.
 *.png binary
@@ -21,6 +23,10 @@
 *.dll binary
 *.exe binary
 *.pdf binary
+*.pdb binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
 
 # Ensure specific scripts use LF line endings
 *.ps1 text eol=lf
@@ -29,3 +35,6 @@
 # Ensure that configuration files use LF
 *.gitignore text eol=lf
 *.gitattributes text eol=lf
+
+# Specific to .NET and ASP.NET Core projects
+*.sln text eol=crlf
