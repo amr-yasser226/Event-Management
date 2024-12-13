@@ -1,7 +1,8 @@
-/* style.css */
+/* wwwroot/css/style.css */
 
+/* General Styles */
 body {
-    padding-top: 70px;
+    background-color: #f8f9fa;
 }
 
 h1,
@@ -21,4 +22,39 @@ h6 {
 .btn-block {
     width: 100%;
     margin-bottom: 10px;
+}
+
+/* Adjust container padding to account for fixed navbar */
+.container {
+    padding-top: 70px;
+    /* Height of the navbar */
+}
+
+/* Navbar Styles */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
 }

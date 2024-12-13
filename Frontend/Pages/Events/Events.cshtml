@@ -1,0 +1,32 @@
+@page
+@model Frontend.Pages.Events.EventsModel
+@{
+    ViewData["Title"] = "Available Events";
+}
+
+<h2>Available Events</h2>
+
+<div class="row">
+    @foreach (var eventItem in Model.Events)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="@eventItem.ImageUrl" class="card-img-top" alt="@eventItem.Name" />
+                <div class="card-body">
+                    <h5 class="card-title">@eventItem.Name</h5>
+                    <p class="card-text">@eventItem.Description</p>
+                    <p class="card-text"><strong>Date:</strong> @eventItem.Date.ToString("MMMM dd, yyyy")</p>
+                    <a asp-page="./EventDetails/EventDetails" asp-route-id="@eventItem.Id" class="btn btn-primary">Choose
+                        Event</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+</style>

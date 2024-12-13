@@ -1,0 +1,110 @@
+@page "{id:int}"
+@model Frontend.Pages.Events.EventDetailsModel
+@{
+    ViewData["Title"] = Model.SelectedEvent.Name;
+}
+
+<h2>@Model.SelectedEvent.Name</h2>
+<p>@Model.SelectedEvent.Description</p>
+<p><strong>Date:</strong> @Model.SelectedEvent.Date.ToString("MMMM dd, yyyy")</p>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Input.IsSpeaker"></label>
+        <select asp-for="Input.IsSpeaker" class="form-control">
+            <option value="">-- Select --</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <span asp-validation-for="Input.IsSpeaker" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Input.TicketType"></label>
+        <select asp-for="Input.TicketType" class="form-control">
+            <option value="">-- Select Ticket Type --</option>
+            <option>General Admission</option>
+            <option>Early Bird</option>
+            <option>Premium</option>
+            <option>Student</option>
+            <option>Group</option>
+        </select>
+        <span asp-validation-for="Input.TicketType" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Input.IsVIP"></label>
+        <select asp-for="Input.IsVIP" class="form-control">
+            <option value="">-- Select --</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <span asp-validation-for="Input.IsVIP" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Input.MealPreferences"></label>
+        <select asp-for="Input.MealPreferences" class="form-control">
+            <option value="">-- Select Meal Preference --</option>
+            <option>Vegetarian</option>
+            <option>Vegan</option>
+            <option>Gluten-Free</option>
+            <option>Halal</option>
+            <option>Kosher</option>
+            <option>No Preference</option>
+        </select>
+        <span asp-validation-for="Input.MealPreferences" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Input.SessionInterests"></label>
+        <input asp-for="Input.SessionInterests" class="form-control" />
+        <span asp-validation-for="Input.SessionInterests" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Input.AccessibilityNeeds"></label>
+        <textarea asp-for="Input.AccessibilityNeeds" class="form-control"></textarea>
+        <span asp-validation-for="Input.AccessibilityNeeds" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Input.CommunicationPreferences"></label>
+        <select asp-for="Input.CommunicationPreferences" class="form-control">
+            <option value="">-- Select Communication Preference --</option>
+            <option>Email</option>
+            <option>SMS</option>
+            <option>Phone Call</option>
+            <option>Mail</option>
+            <option>None</option>
+        </select>
+        <span asp-validation-for="Input.CommunicationPreferences" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Input.Purpose"></label>
+        <textarea asp-for="Input.Purpose" class="form-control"></textarea>
+        <span asp-validation-for="Input.Purpose" class="text-danger"></span>
+    </div>
+
+    <!-- Additional Question -->
+    <div class="form-group">
+        <label asp-for="Input.ReferralSource"></label>
+        <input asp-for="Input.ReferralSource" class="form-control" />
+        <span asp-validation-for="Input.ReferralSource" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Proceed to Payment</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    textarea {
+        resize: vertical;
+    }
+</style>

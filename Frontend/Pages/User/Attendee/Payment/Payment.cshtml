@@ -1,0 +1,77 @@
+@page "{id:int}"
+@model Frontend.Pages.User.Attendee.Payment.PaymentModel
+@{
+    ViewData["Title"] = "Payment Method";
+}
+
+<h2>Payment Method for @Model.SelectedEvent.Name</h2>
+<p>Please select your preferred payment method and enter the required details.</p>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Input.PaymentMethod"></label>
+        <select asp-for="Input.PaymentMethod" class="form-control" onchange="togglePaymentFields()">
+            <option value="">-- Select Payment Method --</option>
+            <option>Credit Card</option>
+            <option>Visa</option>
+            <option>MasterCard</option>
+            <option>PayPal</option>
+            <option>Vodafone Cash</option>
+        </select>
+        <span asp-validation-for="Input.PaymentMethod" class="text-danger"></span>
+    </div>
+
+    <div id="credit-card-fields" style="display:none;">
+        <div class="form-group">
+            <label asp-for="Input.CardNumber"></label>
+            <input asp-for="Input.CardNumber" class="form-control" />
+            <span asp-validation-for="Input.CardNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.ExpirationDate"></label>
+            <input asp-for="Input.ExpirationDate" type="month" class="form-control" />
+            <span asp-validation-for="Input.ExpirationDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.CVV"></label>
+            <input asp-for="Input.CVV" type="password" class="form-control" />
+            <span asp-validation-for="Input.CVV" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div id="paypal-fields" style="display:none;">
+        <div class="form-group">
+            <label asp-for="Input.PayPalEmail"></label>
+            <input asp-for="Input.PayPalEmail" class="form-control" />
+            <span asp-validation-for="Input.PayPalEmail" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div id="vodafone-cash-fields" style="display:none;">
+        <div class="form-group">
+            <label asp-for="Input.VodafoneCashNumber"></label>
+            <input asp-for="Input.VodafoneCashNumber" class="form-control" />
+            <span asp-validation-for="Input.VodafoneCashNumber" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!-- Add more payment method fields as needed -->
+
+    <button type="submit" class="btn btn-success">Proceed to Payment</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        function togglePaymentFields() {
+            var paymentMethod = document.getElementById("Input_PaymentMethod").value;
+            document.getElementById("credit-card-fields").style.display = (paymentMethod === "Credit Card" || paymentMethod === "Visa" || paymentMethod === "MasterCard") ? "block" : "none";
+            document.getElementById("paypal-fields").style.display = (paymentMethod === "PayPal") ? "block" : "none";
+            document.getElementById("vodafone-cash-fields").style.display = (paymentMethod === "Vodafone Cash") ? "block" : "none";
+            // Add more conditions as needed
+        }
+    </script>
+}
