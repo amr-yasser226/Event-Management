@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Frontend.Pages.Shared.Validation; // Ensure this using directive is present
 
 namespace Frontend.Pages.Events
 {
@@ -36,7 +35,7 @@ namespace Frontend.Pages.Events
             // For example, save to the database
 
             // Redirect to Payment page
-            return RedirectToPage("/User/Attendee/Payment", new { id = id });
+            return RedirectToPage("/User/Attendee/Payment/Payment", new { id = id });
         }
 
         private EventItem GetEventById(int id)

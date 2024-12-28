@@ -4,30 +4,58 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Our Event</h1>
-    <p>Select an option below:</p>
-    <div class="row justify-content-center">
-        <!-- First Three Choices: Attend, Volunteer, Organize -->
-        <div class="col-md-2 mb-2">
-            <a class="btn btn-primary btn-block" href="/AuthChoice/AuthChoice?role=Attendee">Attend</a>
-        </div>
-        <div class="col-md-2 mb-2">
-            <a class="btn btn-secondary btn-block" href="/AuthChoice/AuthChoice?role=Volunteer">Volunteer</a>
-        </div>
-        <div class="col-md-2 mb-2">
-            <a class="btn btn-success btn-block" href="/AuthChoice/AuthChoice?role=Organizer">Organize</a>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- Last Three Choices: Vendor, Sponsor, Donate -->
-        <div class="col-md-2 mb-2">
-            <a class="btn btn-info btn-block" href="/Vendor/Vendor">Vendor</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Event Management</title>
+    <!-- Link to Index Page Specific CSS -->
+    <link rel="stylesheet" href="~/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Our Event Management</h1>
+            <p>Your partner in creating memorable events</p>
         </div>
-        <div class="col-md-2 mb-2">
-            <a class="btn btn-warning btn-block" href="/Sponsor/Sponsor">Sponsor</a>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links"></ul>
         </div>
-        <div class="col-md-2 mb-2">
-            <a class="btn btn-danger btn-block" href="/Donation/Donation">Donate</a>
+    </nav>
+
+    <main>
+        <section class="selection-section">
+            <div class="container">
+                <h2>Select an option below:</h2>
+                <div class="options">
+                    <a href="Authentication/Login/Login" class="btn">Login</a>
+                    <a href="Authentication/SignIn/SignIn" class="btn">Sign Up</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year Event Management. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
         </div>
-    </div>
-</div>
+    </footer>
+
+    <!-- Optional JavaScript for enhanced interactivity -->
+    <script src="/js/script.js" defer></script>
+</body>
+
+</html>

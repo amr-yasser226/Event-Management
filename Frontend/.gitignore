@@ -1,51 +1,51 @@
-# Build Folders
-/bin/
-/obj/
+# # Build Folders
+# /bin/
+# /obj/
 
-# User-specific files
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+# # User-specific files
+# *.suo
+# *.user
+# *.userosscache
+# *.sln.docstates
 
-# Visual Studio cache
-.vs/
-.vscode/
+# # Visual Studio cache
+# .vs/
+# .vscode/
 
-# Logs
-*.log
+# # Logs
+# *.log
 
-# Others
-*.dbmdl
-*.bak
-*.backup
+# # Others
+# *.dbmdl
+# *.bak
+# *.backup
 
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
+# # ASP.NET Scaffolding
+# ScaffoldingReadMe.txt
 
-# StyleCop
-StyleCopReport.xml
+# # StyleCop
+# StyleCopReport.xml
 
-# Temporary Files
-*.tmp
-*.temp
+# # Temporary Files
+# *.tmp
+# *.temp
 
-# NuGet Packages
-*.nupkg
-packages/
-*.nuget.props
-*.nuget.targets
+# # NuGet Packages
+# *.nupkg
+# packages/
+# *.nuget.props
+# *.nuget.targets
 
-# Publish Web Output
-*.[Pp]ublish.xml
-*.azurepub
+# # Publish Web Output
+# *.[Pp]ublish.xml
+# *.azurepub
 
-# Node.js
-node_modules/
-npm-debug.log
+# # Node.js
+# node_modules/
+# npm-debug.log
 
-# Rider
-.idea/
+# # Rider
+# .idea/
 
-# Windows
-Thumbs.db
+# # Windows
+# Thumbs.db

@@ -5,12 +5,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-// Add Authentication Services
+// Configure Authentication
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.LoginPath = "/User/Attendee/Login";
-        options.AccessDeniedPath = "/User/Attendee/Login";
+        options.LoginPath = "/User/Attendee/Login"; // Redirect to login page if not authenticated
+        options.AccessDeniedPath = "/AccessDenied"; // Redirect to access denied page
+        options.ExpireTimeSpan = TimeSpan.FromHours(2);
     });
 
 var app = builder.Build();
@@ -19,8 +20,10 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
+    app.UseHsts();
 }
 
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();

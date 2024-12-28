@@ -1,9 +1,11 @@
 ﻿<environment include="Development">
+    <!-- Local Scripts for Development -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 </environment>
 <environment exclude="Development">
+    <!-- CDN Scripts for Production -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8jhAXgqL7Q2MZq6VdBiU9Q5Ys8i27+G5E70OYe+hEAnKx9"
         crossorigin="anonymous"></script>
@@ -12,5 +14,6 @@
         crossorigin="anonymous"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"
-        integrity="sha384-abc123" crossorigin="anonymous"></script>
+        integrity="sha384-0uMGAXpS+PHnF+gXlvX+HbuczSlk6ly6fn1N5Uv7E/3iF7XOCvNpnV4gUQqHImR7"
+        crossorigin="anonymous"></script>
 </environment>

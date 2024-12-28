@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Frontend.Pages.Shared.Validation; // Added using directive
+using System.Linq;
 
 namespace Frontend.Pages.User.Attendee.Payment
 {
@@ -26,8 +26,20 @@ namespace Frontend.Pages.User.Attendee.Payment
 
         public IActionResult OnPost(int id)
         {
-            if (!ModelState.IsValid)
+            // Perform manual validation
+            var validationResults = new List<ValidationResult>();
+            var validationContext = new ValidationContext(Input, null, null);
+            bool isValid = Validator.TryValidateObject(Input, validationContext, validationResults, true);
+
+            if (!isValid)
             {
+                foreach (var validationResult in validationResults)
+                {
+                    // Ensure errorMessage is not null
+                    string errorMessage = validationResult.ErrorMessage ?? "An error occurred during validation.";
+                    ModelState.AddModelError(string.Empty, errorMessage);
+                }
+
                 SelectedEvent = GetEventById(id);
                 return Page();
             }
@@ -35,8 +47,15 @@ namespace Frontend.Pages.User.Attendee.Payment
             // TODO: Process the payment
             // Integrate with payment gateway APIs as needed
 
-            // After successful payment, redirect to Thank You page
-            return RedirectToPage("/Thankyou");
+            // After successful payment, store payment details in TempData
+            TempData["PaymentMethod"] = Input.PaymentMethod ?? "N/A";
+            TempData["CardNumber"] = Input.CardNumber ?? "N/A";
+            TempData["ExpirationDate"] = Input.ExpirationDate ?? "N/A";
+            TempData["PayPalEmail"] = Input.PayPalEmail ?? "N/A";
+            TempData["VodafoneCashNumber"] = Input.VodafoneCashNumber ?? "N/A";
+
+            // Redirect to Confirmation page with id
+            return RedirectToPage("/User/Attendee/Confirmation/Confirmation", new { id = id });
         }
 
         private EventItem GetEventById(int id)
@@ -60,41 +79,79 @@ namespace Frontend.Pages.User.Attendee.Payment
         public class EventItem
         {
             public int Id { get; set; }
-            public string Name { get; set; } = string.Empty;
-            public string Description { get; set; } = string.Empty;
+            public string Name { get; set; } = string.Empty; // Initialize to prevent null warnings
+            public string Description { get; set; } = string.Empty; // Initialize to prevent null warnings
             public DateTime Date { get; set; }
         }
 
-        public class PaymentInput
+        public class PaymentInput : IValidatableObject
         {
             [Required(ErrorMessage = "Please select a payment method.")]
             [Display(Name = "Payment Method")]
             public string? PaymentMethod { get; set; }
 
             // Credit Card Fields
-            [RequiredIf("PaymentMethod", "Credit Card", ErrorMessage = "Card Number is required.")]
             [Display(Name = "Card Number")]
             public string? CardNumber { get; set; }
 
-            [RequiredIf("PaymentMethod", "Credit Card", ErrorMessage = "Expiration Date is required.")]
             [Display(Name = "Expiration Date")]
             public string? ExpirationDate { get; set; }
 
-            [RequiredIf("PaymentMethod", "Credit Card", ErrorMessage = "CVV is required.")]
             [Display(Name = "CVV")]
             public string? CVV { get; set; }
 
             // PayPal Fields
-            [EmailAddress]
-            [Display(Name = "PayPal Email")]
+            [EmailAddress(ErrorMessage = "Please enter a valid PayPal email address.")]
             public string? PayPalEmail { get; set; }
 
             // Vodafone Cash Fields
-            [Phone]
-            [Display(Name = "Vodafone Cash Number")]
+            [Phone(ErrorMessage = "Please enter a valid Vodafone Cash number.")]
             public string? VodafoneCashNumber { get; set; }
 
             // Add more payment fields as needed
+
+            public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+            {
+                var results = new List<ValidationResult>();
+
+                if (PaymentMethod == "Credit Card" || PaymentMethod == "Visa" || PaymentMethod == "MasterCard")
+                {
+                    if (string.IsNullOrWhiteSpace(CardNumber))
+                    {
+                        results.Add(new ValidationResult("Card Number is required.", new[] { nameof(CardNumber) }));
+                    }
+
+                    if (string.IsNullOrWhiteSpace(ExpirationDate))
+                    {
+                        results.Add(new ValidationResult("Expiration Date is required.", new[] { nameof(ExpirationDate) }));
+                    }
+
+                    if (string.IsNullOrWhiteSpace(CVV))
+                    {
+                        results.Add(new ValidationResult("CVV is required.", new[] { nameof(CVV) }));
+                    }
+                }
+
+                if (PaymentMethod == "PayPal")
+                {
+                    if (string.IsNullOrWhiteSpace(PayPalEmail))
+                    {
+                        results.Add(new ValidationResult("PayPal Email is required.", new[] { nameof(PayPalEmail) }));
+                    }
+                }
+
+                if (PaymentMethod == "Vodafone Cash")
+                {
+                    if (string.IsNullOrWhiteSpace(VodafoneCashNumber))
+                    {
+                        results.Add(new ValidationResult("Vodafone Cash Number is required.", new[] { nameof(VodafoneCashNumber) }));
+                    }
+                }
+
+                // Add more conditional validations as needed
+
+                return results;
+            }
         }
     }
 }

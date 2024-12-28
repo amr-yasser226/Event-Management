@@ -6,7 +6,7 @@
 *.cshtml text
 *.html text
 *.css text
-*.js text
+*.js text eol=lf
 *.json text
 *.xml text
 *.md text

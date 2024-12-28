@@ -1,0 +1,52 @@
+@page "{id:int}"
+@model Frontend.Pages.User.Attendee.Confirmation.ConfirmationModel
+@{
+    ViewData["Title"] = "Confirm Your Details";
+}
+
+<h2>Confirm Your Details</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.UserName (@Model.UserEmail)</h5>
+        <p class="card-text"><strong>Event:</strong> @Model.EventName</p>
+        <p class="card-text"><strong>Event Date:</strong> @Model.EventDate.ToString("MMMM dd, yyyy")</p>
+        <p class="card-text"><strong>Ticket Type:</strong> @Model.TicketType</p>
+        <p class="card-text"><strong>VIP Attendee:</strong> @Model.IsVIP</p>
+        <p class="card-text"><strong>Meal Preferences:</strong> @Model.MealPreferences</p>
+        <p class="card-text"><strong>Session Interests:</strong> @Model.SessionInterests</p>
+        <p class="card-text"><strong>Accessibility Needs:</strong> @Model.AccessibilityNeeds</p>
+        <p class="card-text"><strong>Communication Preferences:</strong> @Model.CommunicationPreferences</p>
+        <p class="card-text"><strong>Purpose of Attending:</strong> @Model.Purpose</p>
+        <p class="card-text"><strong>Referral Source:</strong> @Model.ReferralSource</p>
+        <p class="card-text"><strong>Payment Method:</strong> @Model.PaymentMethod</p>
+
+        @if (Model.PaymentMethod == "Credit Card" || Model.PaymentMethod == "Visa" || Model.PaymentMethod ==
+        "MasterCard")
+        {
+            <p class="card-text"><strong>Card Number:</strong> **** **** ****
+                @Model.CardNumber?.Substring(Model.CardNumber.Length - 4)</p>
+            <p class="card-text"><strong>Expiration Date:</strong> @Model.ExpirationDate</p>
+        }
+        else if (Model.PaymentMethod == "PayPal")
+        {
+            <p class="card-text"><strong>PayPal Email:</strong> @Model.PayPalEmail</p>
+        }
+        else if (Model.PaymentMethod == "Vodafone Cash")
+        {
+            <p class="card-text"><strong>Vodafone Cash Number:</strong> @Model.VodafoneCashNumber</p>
+        }
+        <!-- Add more payment method details as needed -->
+    </div>
+</div>
+
+<form method="post" class="mt-4">
+    <button type="submit" class="btn btn-primary">Agree and Confirm</button>
+    <a asp-page="/Events/Events" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
