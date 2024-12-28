@@ -1,7 +1,7 @@
 use [EventManagementSystem];
 
 
- CREATE TABLE Attendees (
+CREATE TABLE Attendees (
  PRIMARY KEY (User_ID, Event_ID),
  User_ID INT NOT NULL FOREIGN KEY REFERENCES Users(User_ID),
  Event_ID INT NOT NULL FOREIGN KEY REFERENCES Events(Event_ID),
