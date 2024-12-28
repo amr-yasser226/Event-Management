@@ -1,0 +1,210 @@
+/* Main container */
+.donation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+/* Header styles */
+.donation-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.donation-header h1 {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #636e72;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Content layout */
+.donation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Impact cards */
+.impact-cards {
+    display: grid;
+    gap: 20px;
+}
+
+.impact-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.impact-card h3 {
+    color: #2d3436;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.impact-card p {
+    color: #636e72;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Form styles */
+.donation-form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.donation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.amount-selector {
+    margin-bottom: 25px;
+}
+
+.amount-selector h3 {
+    margin-bottom: 15px;
+    color: #2d3436;
+    font-size: 1.2rem;
+}
+
+.preset-amounts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.amount-btn {
+    padding: 12px;
+    border: 2px solid #dfe6e9;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #2d3436;
+    transition: all 0.3s ease;
+}
+
+.amount-btn:hover {
+    border-color: #74b9ff;
+    background: #f0f7ff;
+}
+
+.amount-btn.active {
+    background: #74b9ff;
+    border-color: #74b9ff;
+    color: white;
+}
+
+.custom-amount {
+    margin-top: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2d3436;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #74b9ff;
+    outline: none;
+}
+
+.text-danger {
+    color: #ff7675;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.donate-btn {
+    background: #00b894;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.donate-btn:hover {
+    background: #00a884;
+}
+
+/* Footer */
+.donation-footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #636e72;
+}
+
+.donation-footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .donation-content {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-header h1 {
+        font-size: 2rem;
+    }
+
+    .preset-amounts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .impact-cards {
+        margin-bottom: 30px;
+    }
+}

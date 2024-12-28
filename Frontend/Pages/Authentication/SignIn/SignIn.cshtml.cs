@@ -24,23 +24,23 @@ namespace Frontend.Pages.Authentication.SignIn
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
+            // if (!ModelState.IsValid)
+            // {
+            //     return Page();
+            // }
 
             // Validate password complexity
-            if (!IsPasswordComplex(Input.Password))
-            {
-                ModelState.AddModelError("Input.Password", "Password must contain at least one uppercase letter, one number, and one special character.");
-                return Page();
-            }
+            // if (!IsPasswordComplex(Input.Password))
+            // {
+            //     ModelState.AddModelError("Input.Password", "Password must contain at least one uppercase letter, one number, and one special character.");
+            //     return Page();
+            // }
 
-            if (Input.Password != Input.ConfirmPassword)
-            {
-                ModelState.AddModelError("Input.ConfirmPassword", "Passwords do not match.");
-                return Page();
-            }
+            // if (Input.Password != Input.ConfirmPassword)
+            // {
+            //     ModelState.AddModelError("Input.ConfirmPassword", "Passwords do not match.");
+            //     return Page();
+            // }
 
             // TODO: Implement actual user creation and persistence logic (e.g., saving to a database)
 
@@ -68,7 +68,7 @@ namespace Frontend.Pages.Authentication.SignIn
                 new ClaimsPrincipal(claimsIdentity),
                 authProperties);
 
-            return RedirectToPage("/Events/Events");
+            return RedirectToPage("/RoleSelection/RoleSelection");
         }
 
         private bool IsPasswordComplex(string password)

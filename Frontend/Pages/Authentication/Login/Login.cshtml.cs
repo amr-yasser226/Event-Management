@@ -18,7 +18,7 @@ namespace Frontend.Pages.Authentication.Login
             new UserCredentials { Email = "volunteer@example.com", Password = "Password123" }
         };
 
-        private const string RedirectAfterLogin = "/Dashboard";
+        private const string RedirectAfterLogin = "/RoleSelection/RoleSelection";
 
         [BindProperty]
         public LoginInput Input { get; set; } = new();

@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\Frontend.cv030y5jw4.bundle.scp.css"
     },
     {
+      "Id": "C:\\Event-Management\\Frontend\\wwwroot\\css\\donation.css",
+      "PackagePath": "staticwebassets\\css\\donation.css"
+    },
+    {
       "Id": "C:\\Event-Management\\Frontend\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Event-Management\\Frontend\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Event-Management\\Frontend\\wwwroot\\css\\logout.css",
+      "PackagePath": "staticwebassets\\css\\logout.css"
+    },
+    {
+      "Id": "C:\\Event-Management\\Frontend\\wwwroot\\css\\roleselection.css",
+      "PackagePath": "staticwebassets\\css\\roleselection.css"
     },
     {
       "Id": "C:\\Event-Management\\Frontend\\wwwroot\\css\\signin.css",

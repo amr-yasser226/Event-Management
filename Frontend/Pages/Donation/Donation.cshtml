@@ -1,33 +1,103 @@
 @page
 @model Frontend.Pages.Donation.DonationModel
 @{
-    ViewData["Title"] = "Donate";
+    ViewData["Title"] = "Make a Difference - Donate Today";
 }
 
-<h2>Donate</h2>
-<p>This is a test to verify if the Donation page loads correctly.</p>
+<link rel="stylesheet" href="~/css/donation.css" />
 
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Donation.Amount"></label>
-        <input asp-for="Donation.Amount" class="form-control" />
-        <span asp-validation-for="Donation.Amount" class="text-danger"></span>
+<div class="donation-container">
+    <div class="donation-header">
+        <h1>Make a Difference Today</h1>
+        <p class="subtitle">Your generosity helps us create unforgettable events and support our community</p>
     </div>
-    <div class="form-group">
-        <label asp-for="Donation.YourName"></label>
-        <input asp-for="Donation.YourName" class="form-control" />
-        <span asp-validation-for="Donation.YourName" class="text-danger"></span>
+
+    <div class="donation-content">
+        <div class="donation-info">
+            <div class="impact-cards">
+                <div class="impact-card">
+                    <span class="impact-icon">🎯</span>
+                    <h3>Impact</h3>
+                    <p>Your donation directly supports event organization and community development</p>
+                </div>
+                <div class="impact-card">
+                    <span class="impact-icon">💝</span>
+                    <h3>Trust</h3>
+                    <p>100% of your donation goes towards making events more accessible and inclusive</p>
+                </div>
+                <div class="impact-card">
+                    <span class="impact-icon">🌟</span>
+                    <h3>Recognition</h3>
+                    <p>Donors receive special recognition at our events and in our community</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="donation-form-container">
+            <form method="post" class="donation-form">
+                <div class="amount-selector">
+                    <h3>Select Amount</h3>
+                    <div class="preset-amounts">
+                        <button type="button" class="amount-btn" data-amount="25">$25</button>
+                        <button type="button" class="amount-btn" data-amount="50">$50</button>
+                        <button type="button" class="amount-btn" data-amount="100">$100</button>
+                        <button type="button" class="amount-btn" data-amount="250">$250</button>
+                    </div>
+                    <div class="custom-amount">
+                        <label for="Donation_Amount">Custom Amount ($)</label>
+                        <input asp-for="DonationAmount" class="form-control" placeholder="Enter amount" />
+                        <span asp-validation-for="DonationAmount" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="PaymentMethod">Payment Method</label>
+                    <select id="PaymentMethod" asp-for="PaymentMethod" class="form-control">
+                        <option value="">Select a payment method</option>
+                        <option value="CreditCard">Credit Card</option>
+                        <option value="PayPal">PayPal</option>
+                        <option value="BankTransfer">Bank Transfer</option>
+                    </select>
+                    <span asp-validation-for="PaymentMethod" class="text-danger"></span>
+                </div>
+
+                <!-- Mock Stripe Payment Form -->
+                <div id="payment-method-form">
+                    <h4>Enter Payment Details</h4>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" />
+                    </div>
+                    <div class="form-group">
+                        <label for="expirationDate">Expiration Date</label>
+                        <input type="text" id="expirationDate" class="form-control" placeholder="MM/YY" />
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" class="form-control" placeholder="123" />
+                    </div>
+                </div>
+
+                <button type="submit" class="donate-btn">Donate Now</button>
+            </form>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Donation.Email"></label>
-        <input asp-for="Donation.Email" class="form-control" />
-        <span asp-validation-for="Donation.Email" class="text-danger"></span>
+
+    <div class="donation-footer">
+        <p>🔒 Your donation is secure and encrypted</p>
+        <p>❓ Questions? Contact our support team</p>
     </div>
-    <button type="submit" class="btn btn-primary">Donate</button>
-</form>
+</div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        document.querySelectorAll('.amount-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('Donation_Amount').value = this.dataset.amount;
+            });
+        });
+    </script>
 }

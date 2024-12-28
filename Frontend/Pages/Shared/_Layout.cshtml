@@ -30,16 +30,7 @@
                 @if (User.Identity?.IsAuthenticated == true)
                 {
                     <li class="nav-item">
-                        <a class="nav-link" href="/User/Attendee/Logout">Logout</a>
-                    </li>
-                }
-                else
-                {
-                    <li class="nav-item">
-                        <a class="nav-link" href="/User/Attendee/Login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/User/Attendee/SignIn">Sign In</a>
+                        <a class="nav-link" href="/Authentication/Logout/Logout">Logout</a>
                     </li>
                 }
             </ul>
@@ -54,7 +45,6 @@
     <!-- Footer -->
     <footer class="footer bg-light py-3">
         <div class="container text-center">
-            <span class="text-muted">&copy; 2024 - Frontend</span>
         </div>
     </footer>
 

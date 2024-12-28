@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fQfv1Ozsn/MWrcZfjbRF6+8VGp+Tl3ubwtoHfiXtOvM=",
+  "Hash": "fxSLZ8k/NY80mJwKKjMzv4Qrhqr76HuVvnHuoqQDMWU=",
   "Source": "Frontend",
   "BasePath": "_content/Frontend",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "C:\\Event-Management\\Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Frontend.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Event-Management\\Frontend\\wwwroot\\css\\donation.css",
+      "SourceId": "Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Event-Management\\Frontend\\wwwroot\\",
+      "BasePath": "_content/Frontend",
+      "RelativePath": "css/donation#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ka941piaso",
+      "Integrity": "9LIf6rATtxSu3wAl6usqd+HB0eipx37sot4LrBU5W2A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\donation.css"
+    },
+    {
       "Identity": "C:\\Event-Management\\Frontend\\wwwroot\\css\\index.css",
       "SourceId": "Frontend",
       "SourceType": "Discovered",
@@ -78,6 +99,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "C:\\Event-Management\\Frontend\\wwwroot\\css\\login.css",
+      "SourceId": "Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Event-Management\\Frontend\\wwwroot\\",
+      "BasePath": "_content/Frontend",
+      "RelativePath": "css/login#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4zourvmsgf",
+      "Integrity": "EO91H3FrCa+HPXPnEESiFqYjD29/7PXzUGU6H8a+gMQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "C:\\Event-Management\\Frontend\\wwwroot\\css\\logout.css",
+      "SourceId": "Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Event-Management\\Frontend\\wwwroot\\",
+      "BasePath": "_content/Frontend",
+      "RelativePath": "css/logout#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "176gxfqm04",
+      "Integrity": "XQDaDdfFR99jqvZDVnRYOvk3OsVELeiy94PObvWcF4A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\logout.css"
+    },
+    {
+      "Identity": "C:\\Event-Management\\Frontend\\wwwroot\\css\\roleselection.css",
+      "SourceId": "Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Event-Management\\Frontend\\wwwroot\\",
+      "BasePath": "_content/Frontend",
+      "RelativePath": "css/roleselection#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l5xugjvqyr",
+      "Integrity": "Wa9NLn0uqXIpCXVwoA8zz8zvP3PTExu6JGdDCyuD8GY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\roleselection.css"
     },
     {
       "Identity": "C:\\Event-Management\\Frontend\\wwwroot\\css\\signin.css",
@@ -4240,6 +4324,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/donation.css",
+      "AssetFile": "C:\\Event-Management\\Frontend\\wwwroot\\css\\donation.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3622"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9LIf6rATtxSu3wAl6usqd+HB0eipx37sot4LrBU5W2A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 18:53:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9LIf6rATtxSu3wAl6usqd+HB0eipx37sot4LrBU5W2A="
+        }
+      ]
+    },
+    {
+      "Route": "css/donation.ka941piaso.css",
+      "AssetFile": "C:\\Event-Management\\Frontend\\wwwroot\\css\\donation.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3622"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9LIf6rATtxSu3wAl6usqd+HB0eipx37sot4LrBU5W2A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 18:53:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ka941piaso"
+        },
+        {
+          "Name": "label",
+          "Value": "css/donation.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9LIf6rATtxSu3wAl6usqd+HB0eipx37sot4LrBU5W2A="
+        }
+      ]
+    },
+    {
       "Route": "css/index.css",
       "AssetFile": "C:\\Event-Management\\Frontend\\wwwroot\\css\\index.css",
       "Selectors": [],
@@ -4262,7 +4428,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Dec 2024 15:28:47 GMT"
+          "Value": "Sat, 28 Dec 2024 17:59:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4299,7 +4465,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 28 Dec 2024 15:28:47 GMT"
+          "Value": "Sat, 28 Dec 2024 17:59:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4318,6 +4484,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-VRAVNo68tU1m/xBGat2rjdEpGHJPZNvmHxIJ9368cA0="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.4zourvmsgf.css",
+      "AssetFile": "C:\\Event-Management\\Frontend\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EO91H3FrCa+HPXPnEESiFqYjD29/7PXzUGU6H8a+gMQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 17:54:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4zourvmsgf"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EO91H3FrCa+HPXPnEESiFqYjD29/7PXzUGU6H8a+gMQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.css",
+      "AssetFile": "C:\\Event-Management\\Frontend\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EO91H3FrCa+HPXPnEESiFqYjD29/7PXzUGU6H8a+gMQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 17:54:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EO91H3FrCa+HPXPnEESiFqYjD29/7PXzUGU6H8a+gMQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/logout.176gxfqm04.css",
+      "AssetFile": "C:\\Event-Management\\Frontend\\wwwroot\\css\\logout.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XQDaDdfFR99jqvZDVnRYOvk3OsVELeiy94PObvWcF4A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 18:47:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "176gxfqm04"
+        },
+        {
+          "Name": "label",
+          "Value": "css/logout.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XQDaDdfFR99jqvZDVnRYOvk3OsVELeiy94PObvWcF4A="
+        }
+      ]
+    },
+    {
+      "Route": "css/logout.css",
+      "AssetFile": "C:\\Event-Management\\Frontend\\wwwroot\\css\\logout.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XQDaDdfFR99jqvZDVnRYOvk3OsVELeiy94PObvWcF4A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 18:47:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XQDaDdfFR99jqvZDVnRYOvk3OsVELeiy94PObvWcF4A="
+        }
+      ]
+    },
+    {
+      "Route": "css/roleselection.css",
+      "AssetFile": "C:\\Event-Management\\Frontend\\wwwroot\\css\\roleselection.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wa9NLn0uqXIpCXVwoA8zz8zvP3PTExu6JGdDCyuD8GY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 18:07:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wa9NLn0uqXIpCXVwoA8zz8zvP3PTExu6JGdDCyuD8GY="
+        }
+      ]
+    },
+    {
+      "Route": "css/roleselection.l5xugjvqyr.css",
+      "AssetFile": "C:\\Event-Management\\Frontend\\wwwroot\\css\\roleselection.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wa9NLn0uqXIpCXVwoA8zz8zvP3PTExu6JGdDCyuD8GY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 18:07:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l5xugjvqyr"
+        },
+        {
+          "Name": "label",
+          "Value": "css/roleselection.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wa9NLn0uqXIpCXVwoA8zz8zvP3PTExu6JGdDCyuD8GY="
         }
       ]
     },

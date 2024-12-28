@@ -1,27 +1,72 @@
 @page
 @model Frontend.Pages.Authentication.Login.LoginModel
 @{
-    ViewData["Title"] = Model.PageTitle;
+    ViewData["Title"] = "User Login";
 }
 
-<h2>@ViewData["Title"]</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-<form method="post">
-    <div>
-        <label asp-for="Input.Email"></label>
-        <input asp-for="Input.Email" />
-        <span asp-validation-for="Input.Email"></span>
-    </div>
-    <div>
-        <label asp-for="Input.Password"></label>
-        <input asp-for="Input.Password" type="password" />
-        <span asp-validation-for="Input.Password"></span>
-    </div>
-    <button type="submit">Login</button>
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Secure Portal</title>
+    <link rel="stylesheet" href="~/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome Back</h1>
+            <p>Please login to access your account</p>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul class="nav-links"></ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="login-section">
+            <div class="container">
+                <h2 class="text-center mb-4">@ViewData["Title"]</h2>
+
+                <form method="post" class="form-container p-4 border rounded shadow bg-light" novalidate>
+                    <div class="form-group mb-3">
+                        <label asp-for="Input.Email" class="form-label">Email Address</label>
+                        <input asp-for="Input.Email" class="form-control" placeholder="Enter your email address" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="Input.Password" class="form-label">Password</label>
+                        <input asp-for="Input.Password" type="password" class="form-control"
+                            placeholder="Enter your password" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year Secure Portal. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="/forgot-password">Forgot Password</a></li>
+                <li><a href="/register">Sign Up</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
     }
-}
+</body>
+
+</html>

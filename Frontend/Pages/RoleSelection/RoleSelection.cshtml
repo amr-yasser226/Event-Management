@@ -1,0 +1,97 @@
+@page
+@model Frontend.Pages.RoleSelection.RoleSelectionModel
+@{
+    ViewData["Title"] = "Select Your Role";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Event Management</title>
+    <link rel="stylesheet" href="~/css/roleselection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Event Management</h1>
+            <p>Please select the role that best describes you</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="role-selection">
+            <div class="container">
+                <h2 class="text-center mb-4">@ViewData["Title"]</h2>
+                <form method="post" class="role-form">
+                    <div class="role-grid">
+                        <button type="submit" name="role" value="Attend" class="role-card">
+                            <div class="role-icon">
+                                <img src="~/images/attend.svg" alt="Attend Icon">
+                            </div>
+                            <h3>Attend</h3>
+                            <p>Join as a guest and enjoy the event.</p>
+                        </button>
+
+                        <button type="submit" name="role" value="Volunteer" class="role-card">
+                            <div class="role-icon">
+                                <img src="~/images/volunteer.svg" alt="Volunteer Icon">
+                            </div>
+                            <h3>Volunteer</h3>
+                            <p>Help us make the event successful.</p>
+                        </button>
+
+                        <button type="submit" name="role" value="Organize" class="role-card">
+                            <div class="role-icon">
+                                <img src="~/images/organize.svg" alt="Organize Icon">
+                            </div>
+                            <h3>Organize</h3>
+                            <p>Be part of the organizing team.</p>
+                        </button>
+
+                        <button type="submit" name="role" value="Vendor" class="role-card">
+                            <div class="role-icon">
+                                <img src="~/images/vendor.svg" alt="Vendor Icon">
+                            </div>
+                            <h3>Vendor</h3>
+                            <p>Showcase your products or services.</p>
+                        </button>
+
+                        <button type="submit" name="role" value="Sponsor" class="role-card">
+                            <div class="role-icon">
+                                <img src="~/images/sponsor.svg" alt="Sponsor Icon">
+                            </div>
+                            <h3>Sponsor</h3>
+                            <p>Support the event financially or otherwise.</p>
+                        </button>
+
+                        <button type="submit" name="role" value="Donate" class="role-card">
+                            <div class="role-icon">
+                                <img src="~/images/donate.svg" alt="Donate Icon">
+                            </div>
+                            <h3>Donate</h3>
+                            <p>Contribute to the event's cause.</p>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year Event Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+
+</html>

@@ -1,17 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Frontend.Models; // Ensure this using directive is present
+using System.ComponentModel.DataAnnotations;
 
 namespace Frontend.Pages.Donation
 {
     public class DonationModel : PageModel
     {
         [BindProperty]
-        public Frontend.Models.Donation Donation { get; set; } = default!; // Fully qualified name
+        [Required(ErrorMessage = "Please enter a donation amount.")]
+        [Range(1, double.MaxValue, ErrorMessage = "Donation amount must be greater than zero.")]
+        public decimal DonationAmount { get; set; }
+
+        [BindProperty]
+        [Required(ErrorMessage = "Please select a payment method.")]
+        public string PaymentMethod { get; set; } = string.Empty;
 
         public void OnGet()
         {
-            // Any initialization logic if needed
+            // Initialize default values if needed
         }
 
         public IActionResult OnPost()
@@ -21,9 +27,10 @@ namespace Frontend.Pages.Donation
                 return Page();
             }
 
-            // TODO: Process the donation (e.g., save to database)
-            // Since you're focusing on frontend, this can remain as a placeholder
+            // Process payment logic here (optional)
 
+            // Redirect to thank you page
+            // TempData["DonationAmount"] = DonationAmount;
             return RedirectToPage("/ThankYou");
         }
     }
