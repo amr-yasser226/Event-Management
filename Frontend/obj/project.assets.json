@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Event-Management\\Frontend\\Frontend.csproj",
+      "projectUniqueName": "C:\\CSAI202_FL23_T20_02P2\\Event-Management\\Frontend\\Frontend.csproj",
       "projectName": "Frontend",
-      "projectPath": "C:\\Event-Management\\Frontend\\Frontend.csproj",
+      "projectPath": "C:\\CSAI202_FL23_T20_02P2\\Event-Management\\Frontend\\Frontend.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Event-Management\\Frontend\\obj\\",
+      "outputPath": "C:\\CSAI202_FL23_T20_02P2\\Event-Management\\Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
